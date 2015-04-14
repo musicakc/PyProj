@@ -6,19 +6,16 @@ Recursive and iterative implementation.
 '''
 
 def factorialr(n):
-    if n == 1 or n == 0:
+    if n == 1:
         return 1
     else:
         return n * factorialr(n-1)
 
 def factoriali(n):
     prod = 1
-    if n == 1 or n == 0
-        return 1
-    else: 
-        for i in range(1, n+1):
-            prod = prod * i
-        return prod
+    for i in range(1, n+1):
+        prod = prod * i
+    return prod
 
 def main():
     print(factorialr(int(raw_input("Enter a number: "))))
