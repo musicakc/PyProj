@@ -6,24 +6,31 @@ Recursive and iterative implementation.
 '''
 
 def factorialr(n):
-    if n == 1 or n == 0:
+    if n == 1:
         return 1
     else:
         return n * factorialr(n-1)
 
 def factoriali(n):
     prod = 1
-    if n == 1 or n == 0
-        return 1
-    else: 
-        for i in range(1, n+1):
-            prod = prod * i
-        return prod
+    for i in range(1, n+1):
+        prod = prod * i
+    return prod
 
 def main():
-    print(factorialr(int(raw_input("Enter a number: "))))
-    print(factoriali(int(raw_input("Enter a number: "))))
-
+    ans=True
+    while ans:
+        print ("""
+        1. Recursive
+        2. Iterative
+        """)
+        ans=raw_input("What would you like to do? ") 
+        if ans=="1":
+            print(factorialr(int(raw_input("Enter a number: "))))
+        elif ans=="2":
+          print(factoriali(int(raw_input("Enter a number: ")))) 
+        elif ans !="":
+          print("\n Not Valid Choice Try again") 
 
 if __name__ == "__main__":
     main()
